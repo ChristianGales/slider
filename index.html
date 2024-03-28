@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <script>
+  // Show corresponding content based on the clicked logo
+const contentClass = slide.dataset.content; // Assuming the data-content attribute contains the class name of the content section
+const contentToShow = document.querySelector(`.${contentClass}`);
+contentToShow.style.display = 'block'; // This is likely where the error is occurring
+</script>
+
+  <!-- Demo styles -->
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .swiper_thumb .swiper-slide {
+      opacity: 0.7;
+    }
+
+    .swiper_thumb .swiper-slide:hover {
+      opacity: 1;
+    }
+
+    .swiper_thumb .swiper-slide-thumb-active {
+      opacity: 1;
+      border: 2px solid hsl(215.71, 97.7%, 52.1%);
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      user-select: none;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: hsl(215.71, 97.7%, 52.1%);
+      background: rgba(255, 255, 255, .8);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      box-shadow: 0px 2px 2px hsl(215.71, 97.7%, 52.1%);
+      z-index: 9;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev::after {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next::after {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .swiper-button-next {
+      right: 0px;
+    }
+
+    .swiper-button-prev {
+      left: 0px;
+    }
+
+    .swiper-button-next:hover {
+      color: #ccc;
+      background: hsl(215.71, 97.7%, 52.1%);
+    }
+
+    .swiper-button-prev:hover {
+      color: #ccc;
+      background: hsl(215.71, 97.7%, 52.1%);
+    }
+
+    /* Hide the section with class "bsit" by default */
+    .bsit {
+      display: none;
+    }
+
+  
+    .swiper_logo .swiper-slide:first-child {
+      opacity: 1;
+      border: 2px solid hsl(215.71, 97.7%, 52.1%);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Logos -->
+  <section class="logos">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-md-12 px-0 py-2">
+          <div class="swiper swiper_logo">
+            <div class="swiper-wrapper pr-5">
+              <div class="swiper-slide">
+                <div class="zoom_img">
+                  <img class="img-fluid" src="img/primary.png" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zoom_img">
+                  <img class="img-fluid" src="img/shs.png" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zoom_img">
+                  <img class="img-fluid" src="img/beed.png" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zoom_img">
+                  <img class="img-fluid" src="img/bsed.png" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zoom_img">
+                  <img class="img-fluid" src="img/bshrm.png" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zoom_img">
+                  <img class="img-fluid" src="img/bsit.png" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zoom_img">
+                  <img class="img-fluid" src="img/bsoa.png" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zoom_img">
+                  <img class="img-fluid" src="img/ptcp.png" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="zoom_img">
+                  <img class="img-fluid" src="img/tesda.png" />
+                </div>
+              </div>
+            </div>
+            
+            <div class="swiper-button-next clickble-slider-next"></div>
+            <div class="swiper-button-prev clickble-slider-prev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- dynamic content based on logo that is clicked -->
+  <section class="">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-md-12 px-0 py-2">
+              <div class="swiper swiper_large_preview">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="zoom_img">
+                      <img class="img-fluid" src="img/bsit1.jpg" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="zoom_img">
+                      <img class="img-fluid" src="img/bsit2.jpg" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="zoom_img">
+                      <img class="img-fluid" src="img/bsit3.jpg" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="zoom_img">
+                      <img class="img-fluid" src="img/bsit5.jpg" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="zoom_img">
+                      <img class="img-fluid" src="img/bsit5.jpg" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="zoom_img">
+                      <img class="img-fluid" src="img/bsit1.jpg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 px-0 py-2">
+              <div class="swiper swiper_thumb">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="zoom_img">
+                      <img class="img-fluid" src="img/bsit1.jpg" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="zoom_img">
+                      <img class="img-fluid" src="img/bsit2.jpg" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="zoom_img">
+                      <img class="img-fluid" src="img/bsit3.jpg" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="zoom_img">
+                      <img class="img-fluid" src="img/bsit4.jpg" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="zoom_img">
+                      <img class="img-fluid" src="img/bsit5.jpg" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="zoom_img">
+                      <img class="img-fluid" src="img/bsit1.jpg" />
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 p-lg-5">
+          <img src="img/bsit.png" class="mx-auto d-block pb-4">
+          <h3 class="text-primary">Bachelor of Science in Information Technology</h3>
+          <div class="lorem_text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda saepe rem sit ducimus! Placeat expedita
+              illo aperiam sint dicta itaque temporibus sequi, porro saepe id veniam sunt vero totam atque.
+              Commodi, quidem iusto earum vitae laboriosam harum accusamus eveniet exercitationem, molestias consequatur
+              expedita dolorum similique pariatur quae illum soluta aliquam dolorem, deleniti ullam praesentium!
+              Officiis quidem perspiciatis quisquam! Officiis, voluptatum?
+            </p>
+          </div>
+          <a href="#" class="btn btn-primary btn-large">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <script>
+   class CustomSwiper {
+    constructor(mainSelector, thumbsSelector, logoSelector) {
+    this.mainSelector = mainSelector;
+    this.thumbsSelector = thumbsSelector;
+    this.logoSelector = logoSelector;
+  }
+
+  init() {
+    // Initialize main product image preview swiper without navigation buttons
+    const swiperThumb = new Swiper(this.thumbsSelector, {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      speed: 300,
+      loop: true,
+      freeMode: true,
+      watchSlidesProgress: true,
+      ClickAble: true,
+    });
+
+    const swiperLargePreview = new Swiper(this.mainSelector, {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      speed: 300,
+      loop: true,
+      autoplay: {
+        delay: 3000, // Autoplay delay in milliseconds
+      },
+      thumbs: {
+        swiper: swiperThumb,
+      },
+      navigation: false, // Disable navigation buttons
+    });
+
+    // Initialize logo swiper with navigation buttons
+    const swiperLogo = new Swiper(this.logoSelector, {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 10000,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  }
+}
+
+// Initialize the custom swiper
+document.addEventListener("DOMContentLoaded", function () {
+  const customSwiper = new CustomSwiper(".swiper_large_preview", ".swiper_thumb", ".swiper_logo");
+  customSwiper.init();
+});
+  </script>
+
+</body>
+</html>
